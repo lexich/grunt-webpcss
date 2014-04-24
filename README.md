@@ -51,7 +51,9 @@ before
 .test { background-image:url('test.png'); }
 ```
 
-```after
+after
+```css
+.test { background-image:url('test.png'); }
 .webp .test { background-image:url('test.webp'); }
 ```
 
@@ -72,7 +74,17 @@ Replacing value
 ### Usage Examples
 
 #### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
+In this example, the default options are used to do something with whatever. 
+Css transforms from
+```css
+.test { background-image:url('test.png'); }
+```
+to
+```css
+.test { background-image:url('test.png'); }
+.webp .test { background-image:url('test.webp'); }
+```
+
 
 ```js
 grunt.initConfig({
@@ -86,13 +98,23 @@ grunt.initConfig({
 ```
 
 #### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
+In this example, the default options are used to do something with whatever. 
+Css transforms from
+```css
+.test { background-image:url('test.png'); }
+```
+to
+```css
+.test { background-image:url('test.png'); }
+.webp1 .test { background-image:url('test.webp'); }
+```
+
 
 ```js
 grunt.initConfig({
   webpcss: {
     options: {
-      baseClass:'.webp',
+      baseClass:'.webp1',
       replace_from:/\.(png|jpg|jpeg)/,
       replace_to:'.webp',
     },
