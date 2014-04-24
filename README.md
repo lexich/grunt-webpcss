@@ -1,5 +1,7 @@
 # grunt-webpcss
 
+[![Build Status](https://travis-ci.org/lexich/grunt-webpcss.png?branch=master)](https://travis-ci.org/lexich/backbone-mixin)
+
 > Process css file to generate addition css ruless to add webp compatble"
 
 ## Getting Started
