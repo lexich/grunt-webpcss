@@ -28,28 +28,46 @@ In your project's Gruntfile, add a section named `webpcss` to the data object pa
 grunt.initConfig({
   webpcss: {
     options: {
-      // Task-specific options go here.
+      baseClass:'.webp',
+      replace_from:/\.(png|jpg|jpeg)/,
+      replace_to:'.webp'
     },
-    your_target: {
-      // Target-specific file lists and/or options go here.
-    },
+    files: {
+      'main.css':['main.css']
+    }
   },
 });
 ```
 
 ### Options
 
-#### options.separator
+#### options.baseClass
 Type: `String`
-Default value: `',  '`
+Default value: `'.webp'`
 
-A string value that is used to do something with whatever.
+Class which prepend selector. For expample:  
+before
+```css
+.test { background-image:url('test.png'); }
+```
 
-#### options.punctuation
+```after
+.webp .test { background-image:url('test.webp'); }
+```
+
+.webp class indicate webp browser support. Reccomends to use [Modernizr](https://modernizr.com/‎)
+
+#### options.replace_from
+Type: `RegExp`
+Default value: `/\.(png|jpg|jpeg)/,`
+
+RegExp pattern for replace
+
+#### options.replace_to
 Type: `String`
-Default value: `'.'`
+Default value: `.webp`
 
-A string value that is used to do something else with whatever else.
+Replacing value
 
 ### Usage Examples
 
@@ -61,7 +79,7 @@ grunt.initConfig({
   webpcss: {
     options: {},
     files: {
-      'dest/default_options': ['src/testing', 'src/123'],
+      'dest/default_options.css': ['default_options.css'],
     },
   },
 });
@@ -74,11 +92,12 @@ In this example, custom options are used to do something else with whatever else
 grunt.initConfig({
   webpcss: {
     options: {
-      separator: ': ',
-      punctuation: ' !!!',
+      baseClass:'.webp',
+      replace_from:/\.(png|jpg|jpeg)/,
+      replace_to:'.webp',
     },
     files: {
-      'dest/default_options': ['src/testing', 'src/123'],
+      'dest/default_options.css': ['default_options.css'],
     },
   },
 });
@@ -88,4 +107,4 @@ grunt.initConfig({
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
-_(Nothing yet)_
+_0.1.0_ - Plugin release
