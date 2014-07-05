@@ -27,13 +27,15 @@ In your project's Gruntfile, add a section named `webpcss` to the data object pa
 ```js
 grunt.initConfig({
   webpcss: {
-    options: {
-      baseClass:'.webp',
-      replace_from:/\.(png|jpg|jpeg)/,
-      replace_to:'.webp'
-    },
-    files: {
-      'main.css':['main.css']
+    task: {
+      options: {
+        baseClass:'.webp',
+        replace_from:/\.(png|jpg|jpeg)/,
+        replace_to:'.webp'
+      },
+      files: {
+        'main.css':['main.css']
+      }
     }
   },
 });
