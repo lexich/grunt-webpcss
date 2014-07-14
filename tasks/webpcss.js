@@ -39,9 +39,14 @@ module.exports = function(grunt) {
           }
           
           var value = rule._value.replace(rx,options.replace_to);
+          var prop = rule.prop;
+          if( value.indexOf(",") == -1 && /url[ ]*\((.+)\)/g.exec(value) ){
+            value = "url(" + RegExp.$1 + ");";
+            prop = "background-image";
+          }
           var new_rule = postcss.rule({selector:selector});
           new_rule.append({
-            prop: rule.prop,
+            prop:prop,
             value: value
           });
           nodes.push(new_rule);
