@@ -40,7 +40,7 @@ module.exports = function(grunt) {
           
           var value = rule._value.replace(rx,options.replace_to);
           var prop = rule.prop;
-          if( value.indexOf(",") == -1 && /url[ ]*\((.+)\)/g.exec(value) ){
+          if( value.indexOf(",") === -1 && /url[ ]*\((.+)\)/g.exec(value) ){
             value = "url(" + RegExp.$1 + ");";
             prop = "background-image";
           }
