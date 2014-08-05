@@ -1,7 +1,7 @@
 {
   "name": "grunt-webpcss",
   "description": "Process css file to generate addition css ruless to add webp compatble\"",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "homepage": "https://github.com/lexich/grunt-webpcss",
   "author": {
     "name": "Efremov Alexey",
