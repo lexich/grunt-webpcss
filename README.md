@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/lexich/grunt-webpcss.svg?branch=master)](https://travis-ci.org/lexich/grunt-webpcss)
 
-> Process css file to generate addition css ruless to add webp compatble"
+> Process css file to generate addition css ruless to add webp compatble
 
 ## Getting Started
 This plugin requires Grunt `~0.4.4`
@@ -91,10 +91,12 @@ to
 ```js
 grunt.initConfig({
   webpcss: {
-    options: {},
-    files: {
-      'dest/default_options.css': ['default_options.css'],
-    },
+    task: {
+      options: {},
+      files: {
+        'dest/default_options.css': ['default_options.css'],
+      },
+    }
   },
 });
 ```
