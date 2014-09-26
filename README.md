@@ -1,4 +1,4 @@
-Gulp analog: [grunt-webpcss](https://github.com/lexich/gulp-webpcss)
+Gulp analog: [gulp-webpcss](https://github.com/lexich/gulp-webpcss)
 # grunt-webpcss
 
 [![Build Status](https://travis-ci.org/lexich/grunt-webpcss.svg?branch=master)](https://travis-ci.org/lexich/grunt-webpcss)
