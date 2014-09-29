@@ -11,7 +11,7 @@
 module.exports = function(grunt) {
 
 	var _ = require('lodash');
-	var webpcss_transform = require('webpcss-transform');
+	var webpcss = require('webpcss');
 
 	grunt.registerMultiTask('webpcss', 'Process css file to generate addition css ruless to add webp compatble"', function() {
 		// Merge task-specific and/or target-specific options with these defaults.
@@ -35,7 +35,7 @@ module.exports = function(grunt) {
 			}).map(function(filepath) {
 				// Read file source.
 				var data = grunt.file.read(filepath);
-				return webpcss_transform(data, options);
+				return webpcss.transform(data, options);
 			}).join('\n');
 
 

@@ -42,6 +42,6 @@
   ],
   "dependencies": {
     "lodash": "^2.4.1",
-    "webpcss-transform": "0.0.2"
+    "webpcss": "0.0.4"
   }
 }
