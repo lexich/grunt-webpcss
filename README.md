@@ -45,35 +45,7 @@ grunt.initConfig({
 
 ### Options
 
-#### options.baseClass
-Type: `String`
-Default value: `'.webp'`
-
-Class which prepend selector. For expample:  
-before
-```css
-.test { background-image:url('test.png'); }
-```
-
-after
-```css
-.test { background-image:url('test.png'); }
-.webp .test { background-image:url('test.webp'); }
-```
-
-.webp class indicate webp browser support. Reccomends to use [Modernizr](https://modernizr.com/‎)
-
-#### options.replace_from
-Type: `RegExp`
-Default value: `/\.(png|jpg|jpeg)/,`
-
-RegExp pattern for replace
-
-#### options.replace_to
-Type: `String`
-Default value: `.webp`
-
-Replacing value
+check [options](https://github.com/lexich/webpcss/blob/master/README.md#options) in webpcss module
 
 ### Usage Examples
 
