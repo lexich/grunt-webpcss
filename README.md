@@ -3,6 +3,7 @@ PostCSS filter: [webpcss](https://github.com/lexich/webpcss)
 # grunt-webpcss
 
 [![Build Status](https://travis-ci.org/lexich/grunt-webpcss.svg?branch=master)](https://travis-ci.org/lexich/grunt-webpcss)
+[![NPM version](https://badge.fury.io/js/grunt-webpcss.svg)](http://badge.fury.io/js/grunt-webpcss)
 
 > Process css file to generate addition css ruless to add webp compatble
 
