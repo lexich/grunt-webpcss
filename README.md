@@ -5,6 +5,7 @@ PostCSS filter: [webpcss](https://github.com/lexich/webpcss)
 [![Build Status](https://travis-ci.org/lexich/grunt-webpcss.svg?branch=master)](https://travis-ci.org/lexich/grunt-webpcss)
 [![NPM version](https://badge.fury.io/js/grunt-webpcss.svg)](http://badge.fury.io/js/grunt-webpcss)
 [![Coverage Status](https://coveralls.io/repos/lexich/grunt-webpcss/badge.png)](https://coveralls.io/r/lexich/grunt-webpcss)
+[![depstat](https://david-dm.org/lexich/grunt-webpcss.png)](https://david-dm.org/lexich/grunt-webpcss)
 > Process css file to generate addition css ruless to add webp compatble
 
 ## Getting Started
