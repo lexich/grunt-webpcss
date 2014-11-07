@@ -110,3 +110,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 _0.1.0_ - Plugin release
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/lexich/grunt-webpcss/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
