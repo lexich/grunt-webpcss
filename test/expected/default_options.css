@@ -18,13 +18,13 @@
   width: 600px;
   height: 400px;
 }
-
 .img_play_photo_multiple{
   background:
    url(number.png) 600px 10px no-repeat,
    url("thingy.png") 10px 10px no-repeat,
    url('Paper-4.png');
-}.webp .img_play_photo_01_thumb{
+}
+.webp .img_play_photo_01_thumb{
   background-image: url(../images/play_photo/01_thumb.webp);
 }
 .webp .img_play_photo_02{
@@ -36,7 +36,6 @@
 .webp .img_play_photo_02{
   background-image: url(../images/play_photo/0233.webp);
 }
-
 .webp .img_play_photo_multiple{
   background-image: url(number.webp),url(thingy.webp),url(Paper-4.webp);
 }
