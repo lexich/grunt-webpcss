@@ -26,14 +26,13 @@
     "node": ">= 0.8.0"
   },
   "scripts": {
-    "test": "npm run jshint && npm run jscs && grunt",
+    "test": "npm run jshint && npm run jscs && grunt test",
     "jshint": "./node_modules/.bin/jshint --reporter ./node_modules/jshint-stylish/stylish.js",
     "jscs": "node_modules/.bin/jscs ."
   },
   "devDependencies": {
     "grunt": "~0.4.0",
     "grunt-contrib-clean": "~0.6.0",
-    "grunt-contrib-jshint": "^0.11.2",
     "grunt-contrib-nodeunit": "~0.4.1",
     "jscs": "^1.13.1",
     "jshint": "^2.7.0",
