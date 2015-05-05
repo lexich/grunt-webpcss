@@ -20,7 +20,8 @@ module.exports = function(grunt) {
 			replace_from:/\.(png|jpg|jpeg)/,
 			replace_to:'.webp'
 		});
-
+		
+		var done = _.after(this.files.length, this.async());
 		// Iterate over all specified file groups.
 		this.files.forEach(function(f) {
 			// Concat specified files.
@@ -34,16 +35,19 @@ module.exports = function(grunt) {
 				}
 			}).map(function(filepath) {
 				// Read file source.
-				var data = grunt.file.read(filepath);
-				return webpcss.transform(data, options);
+				return grunt.file.read(filepath);				
 			}).join('\n');
 
 
-			// Write the destination file.
-			grunt.file.write(f.dest, src);
-
-			// Print a success message.
-			grunt.log.writeln('File "' + f.dest + '" created.');
+			webpcss.transform(src, options)
+				.then(function(res) {
+					// Write the destination file.
+					grunt.file.write(f.dest, res);		
+					// Print a success message.
+					grunt.log.writeln('File "' + f.dest + '" created.');
+					done();
+				})
+				.catch(done);
 		});
 	});
 
