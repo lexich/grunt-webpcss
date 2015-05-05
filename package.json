@@ -41,7 +41,7 @@
     "gruntplugin"
   ],
   "dependencies": {
-    "lodash": "^2.4.2",
+    "lodash": "^3.8.0",
     "webpcss": "1.0.0"
   }
 }
