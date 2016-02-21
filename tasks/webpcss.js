@@ -10,8 +10,9 @@
 var _ = require("lodash"),
     webpcss = require("webpcss");
 
-module.exports = function(grunt) {
-  grunt.registerMultiTask("webpcss", "Process css file to generate addition css ruless to add webp compatble", function() {
+module.exports = function (grunt) {
+  grunt.registerMultiTask(
+		"webpcss", "Process css file to generate addition css ruless to add webp compatble", function () {
     // Merge task-specific and/or target-specific options with these defaults.
     var options = this.options({
       baseClass:".webp",
@@ -22,9 +23,9 @@ module.exports = function(grunt) {
     var done = _.after(this.files.length, this.async());
 
     // Iterate over all specified file groups.
-    this.files.forEach(function(f) {
+    this.files.forEach(function (f) {
       // Concat specified files.
-      var src = f.src.filter(function(filepath) {
+      var src = f.src.filter(function (filepath) {
         // Warn on and remove invalid source files (if nonull was set).
         if (!grunt.file.exists(filepath)) {
           grunt.log.warn("Source file \"" + filepath + "\" not found.");
@@ -32,13 +33,13 @@ module.exports = function(grunt) {
         } else {
           return true;
         }
-      }).map(function(filepath) {
+      }).map(function (filepath) {
         // Read file source.
         return grunt.file.read(filepath);
       }).join("\n");
 
       webpcss.transform(src, options)
-        .then(function(res) {
+        .then(function (res) {
           // Write the destination file.
           grunt.file.write(f.dest, res);
 
